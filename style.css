@@ -1,0 +1,150 @@
+/* Root variables */
+:root {
+  --bg: #ffffff;        /* Page background white */
+  --card: #111827;      /* Card dark color */
+  --muted: #6b7280;     /* Muted text gray */
+  --text: #111827;      /* Main text dark */
+  --accent: #000000;    /* Accent color */
+}
+
+/* Body */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+  background-attachment: fixed;
+}
+
+.navbar {
+  background-color: #090808; /* Black navbar */
+  padding: 10px 20px;
+}
+.navbar-nav .nav-link,
+.navbar .navbar-brand {
+  color: #0e0000 !important; /* White links for contrast */
+  margin-right: 15px;
+}
+.navbar .nav-link:hover {
+  color: var(--accent) !important; /* Optional accent color on hover */
+  transition: 0.3s;
+}
+
+
+/* Header */
+h1 {
+  color: #111827;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Carousel */
+.carousel {
+  max-height: 500px;
+  overflow: hidden;
+}
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(60%) sepia(90%) saturate(300%) hue-rotate(200deg);
+}
+.carousel-indicators [data-bs-target] {
+  background-color: var(--accent);
+}
+
+/* Card styling */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgb(254, 254, 254); /* Dark card */
+  border: 1px solid rgba(6, 5, 5, 0.2);
+  color: var(--text);
+  backdrop-filter: blur(6px);
+}
+.card-img-top {
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Testimonial avatars */
+.avatar img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Hero Section */
+header.hero {
+  padding: 5rem 0 2rem;
+  background: radial-gradient(
+      1200px 600px at 0% -10%,
+      rgba(0, 1, 1, 0.18),
+      transparent
+    ),
+    radial-gradient(
+      1200px 600px at 100% 10%,
+      rgba(99, 102, 241, 0.14),
+      transparent
+    );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Submission card */
+.card.bg-dark {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(250, 255, 253, 0.18);
+}
+
+/* Section titles */
+.section-title {
+  border-left: 4px solid var(--accent);
+  padding-left: 0.6rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+/* Footer styling */
+footer {
+  background-color: #000000; /* Black background */
+  color: #000000;             /* White text for readability */
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+
+/* Skill badge */
+.badge-skill {
+  background: rgba(148, 163, 184, 0.18);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+
+/* Muted/secondary text readability */
+.text-secondary,
+.text-muted,
+.lead {
+  color: #0f1011 !important; /* readable gray on white */
+}
+
+

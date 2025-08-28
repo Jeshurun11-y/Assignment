@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn JavaScript Easily</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { 
+      background: #f8f9fa; 
+      padding: 20px; 
+      font-family: Arial, sans-serif;
+    }
+    .code-box { 
+      background: #212529; 
+      color: #f8f9fa; 
+      padding: 12px; 
+      border-radius: 6px; 
+      font-family: monospace; 
+      font-size: 0.9rem; 
+    }
+    .card { 
+      margin-bottom: 30px; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    }
+    .card-header { 
+      font-weight: bold; 
+      font-size: 1.2rem; 
+    }
+  </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="/index.html">My ePortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Modules
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/fullstackexample.html">Fullstack</a></li>
+              <li><a class="dropdown-item" href="/html.html">HTML</a></li>
+              <li><a class="dropdown-item" href="/css.html">CSS</a></li>
+              <li><a class="dropdown-item" href="/boostrap.html">Bootstrap</a></li>
+            </ul>
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<br><br>
+
+<!-- Welcome to JavaScript -->
+<div class="card">
+  <div class="card-header bg-success text-white">Welcome to JavaScript</div>
+  <div class="card-body">
+    <p>
+      JavaScript is the brain of the web. It makes websites interactive and dynamic.  
+      With JavaScript, you can update content, handle user actions, and create amazing effects in real-time.
+    </p>
+  </div>
+</div>
+
+<!-- Example 1: Simple Alert -->
+<div class="card">
+  <div class="card-header bg-info text-dark">Basic Example: Alert Message</div>
+  <div class="card-body">
+    <p>Use <code>alert()</code> to show a quick message to the user.</p>
+    <div class="code-box">
+      &lt;button onclick="alert('Hello!')"&gt;Click Me&lt;/button&gt;
+    </div>
+    <h6 class="mt-3">Try it live:</h6>
+    <button class="btn btn-primary" onclick="alert('Hello! Welcome to JavaScript!')">Click Me</button>
+  </div>
+</div>
+
+<!-- Example 2: Changing Text Dynamically -->
+<div class="card">
+  <div class="card-header bg-warning text-dark">Change Text with JavaScript</div>
+  <div class="card-body">
+    <p>You can update any element's text using <code>innerText</code>.</p>
+    <div class="code-box">
+      &lt;p id="demo"&gt;Old Text&lt;/p&gt;<br>
+      &lt;button onclick="document.getElementById('demo').innerText='New Text!';"&gt;Change Text&lt;/button&gt;
+    </div>
+    <h6 class="mt-3">See it live:</h6>
+    <p id="demo">Old Text</p>
+    <button class="btn btn-success" onclick="document.getElementById('demo').innerText='New Text!'">Change Text</button>
+  </div>
+</div>
+
+<!-- Example 3: Greeting User -->
+<div class="card">
+  <div class="card-header bg-primary text-white">Personalized Greeting</div>
+  <div class="card-body">
+    <p>Ask for a name and greet the user dynamically.</p>
+    <div class="code-box">
+      &lt;input id="nameInput" placeholder="Enter your name"&gt;<br>
+      &lt;button onclick="greet()"&gt;Greet Me&lt;/button&gt;<br>
+      &lt;p id="greetMsg"&gt;&lt;/p&gt;<br>
+      &lt;script&gt;<br>
+      function greet() {<br>
+      &nbsp;&nbsp;let name=document.getElementById('nameInput').value;<br>
+      &nbsp;&nbsp;document.getElementById('greetMsg').innerText='Hello '+name+'!';<br>
+      }<br>
+      &lt;/script&gt;
+    </div>
+    <h6 class="mt-3">Try it live:</h6>
+    <input id="nameInput" class="form-control w-50 d-inline" placeholder="Enter your name">
+    <button class="btn btn-primary" onclick="greet()">Greet Me</button>
+    <p id="greetMsg" class="mt-2"></p>
+  </div>
+</div>
+
+<!-- Example 4: Simple Calculator -->
+<div class="card">
+  <div class="card-header bg-danger text-white">Simple Calculator</div>
+  <div class="card-body">
+    <p>JavaScript can perform math too! Enter numbers to add them.</p>
+    <div class="code-box">
+      &lt;input id="num1" type="number"&gt; + <br>
+      &lt;input id="num2" type="number"&gt;<br>
+      &lt;button onclick="addNumbers()"&gt;Add&lt;/button&gt;<br>
+      &lt;p id="sum"&gt;&lt;/p&gt;<br>
+      &lt;script&gt;<br>
+      function addNumbers(){<br>
+      &nbsp;&nbsp;let a=Number(document.getElementById('num1').value);<br>
+      &nbsp;&nbsp;let b=Number(document.getElementById('num2').value);<br>
+      &nbsp;&nbsp;document.getElementById('sum').innerText='Sum: '+(a+b);<br>
+      }<br>
+      &lt;/script&gt;
+    </div>
+    <h6 class="mt-3">Try it live:</h6>
+    <input id="num1" class="form-control d-inline w-25" type="number">
+    +
+    <input id="num2" class="form-control d-inline w-25" type="number">
+    <button class="btn btn-danger" onclick="addNumbers()">Add</button>
+    <p id="sum" class="mt-2 fw-bold"></p>
+  </div>
+</div>
+
+<!-- JS in Full-Stack -->
+<div class="card">
+  <div class="card-header bg-dark text-white">JavaScript in Full-Stack</div>
+  <div class="card-body">
+    <p>
+      In full-stack development, JavaScript is everywhere: it powers the browser (front-end) and, with Node.js, the server (back-end).  
+      Learning JavaScript is key to becoming a versatile developer.
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-center text-light py-3 mt-5">
+  <div class="container">
+    <p class="mb-1">© 2025 My ePortfolio | Built with HTML, Bootstrap & JavaScript</p>
+    <a class="btn btn-sm btn-outline-light" href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function greet() {
+    let name = document.getElementById('nameInput').value;
+    document.getElementById('greetMsg').innerText = name.trim() ? 'Hello ' + name + '!' : 'Hello Guest!';
+  }
+  function addNumbers() {
+    let a = Number(document.getElementById('num1').value);
+    let b = Number(document.getElementById('num2').value);
+    document.getElementById('sum').innerText = 'Sum: ' + (a + b);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CET138 ePortfolio – HTML</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f8fafc;
+      color: #000000;
+    }
+    h1, h2, h3 {
+      color: #683534;
+    }
+    .section-title {
+      font-weight: 700;
+      text-transform: uppercase;
+      border-left: 5px solid #ecdd09;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+    .code-card {
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+    pre {
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+    }
+    th {
+      background: #e2e8f0;
+    }
+    details summary {
+      cursor: pointer;
+      color: #00b23b;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    footer p {
+      margin: 0;
+    }
+    .info-box {
+      background: #e0f2fe;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body id="top">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="/index.html">My ePortfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Modules</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/fullstackexample.html">Fullstack</a></li>
+            <li><a class="dropdown-item" href="/javascript.html">javascript</a></li>
+            <li><a class="dropdown-item" href="/css.html">CSS</a></li>
+            <li><a class="dropdown-item" href="/boostrap.html">Bootstrap</a></li>
+          </ul>
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- SECTION: About HTML -->
+<section id="html" class="py-5">
+  <div class="container">
+    <div class="card shadow p-4">
+      <h2 class="section-title">About HTML</h2>
+      <p>HTML (<strong>HyperText Markup Language</strong>) is the standard language for structuring content on the web. It uses <em>tags</em> to define headings, paragraphs, links, images, lists, and more.</p>
+      <div class="info-box">
+        <p>Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> help with accessibility and SEO by giving meaning to content.</p>
+      </div>
+      <p>An HTML page typically includes:</p>
+      <ul>
+        <li>A <strong>DOCTYPE</strong> declaration</li>
+        <li>The root <strong>&lt;html&gt;</strong> element</li>
+        <li>A <strong>&lt;head&gt;</strong> section with metadata like the title and character set</li>
+        <li>A <strong>&lt;body&gt;</strong> section with visible content</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Semantic HTML Example -->
+<section class="py-5 bg-light border-top border-bottom">
+  <div class="container">
+    <h2 class="section-title">HTML Semantic Structure Example</h2>
+    <p>Semantic HTML uses meaningful tags so both users and assistive technologies understand the page's structure. Here's an example of a <strong>Fitness Blog Layout</strong>:</p>
+    
+    <article class="row g-4 align-items-center mt-4">
+      <div class="col-md-6">
+        <figure class="bg-white p-3 rounded shadow-sm">
+          <img class="img-fluid rounded" src="https://picsum.photos/800/450" alt="Placeholder landscape" />
+          <figcaption class="small text-muted mt-2">Figure: Placeholder image with descriptive alt text.</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-6">
+        <h3 class="h4">Card component built with semantic HTML</h3>
+        <p>This card shows how content is grouped for both users and search engines. Proper heading order and semantic tags improve SEO and accessibility.</p>
+        
+        <details>
+          <summary>View HTML Code</summary>
+          <div class="code-card mt-2">
+<pre>
+&lt;article&gt;
+  &lt;header&gt;&lt;h3&gt;Semantic Card&lt;/h3&gt;&lt;/header&gt;
+  &lt;figure&gt;
+    &lt;img src="image.jpg" alt="Descriptive alt"&gt;
+    &lt;figcaption&gt;Caption text&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;Body copy goes here...&lt;/p&gt;
+  &lt;footer&gt;&lt;button&gt;Action&lt;/button&gt;&lt;/footer&gt;
+&lt;/article&gt;
+</pre>
+          </div>
+        </details>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SECTION: Fitness Blog Content -->
+<section class="py-5">
+  <div class="container">
+    <header class="mb-4">
+      <h1>Fitness Journey</h1>
+      <p class="lead">Sharing workout routines, nutrition tips, and healthy lifestyle advice.</p>
+      <nav>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#workouts">Workouts</a></li>
+          <li class="list-inline-item"><a href="#nutrition">Nutrition</a></li>
+          <li class="list-inline-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article id="workouts" class="mb-5">
+        <h3>Workout Breakdown</h3>
+        <ul>
+          <li>Day 1: Full Body (Squats, Push-ups, Plank)</li>
+          <li>Day 2: Rest or Light Cardio</li>
+          <li>Day 3: Upper Body (Pull-ups, Shoulder Press, Dips)</li>
+          <li>Day 4: Lower Body (Lunges, Deadlifts, Calf Raises)</li>
+          <li>Day 5: Core (Crunches, Russian Twists, Leg Raises)</li>
+        </ul>
+
+        <h3>Recommended Weekly Routine</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>Focus</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Monday</td><td>Full Body</td><td>45 min</td></tr>
+            <tr><td>Wednesday</td><td>Upper Body</td><td>40 min</td></tr>
+            <tr><td>Friday</td><td>Lower Body</td><td>40 min</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <aside id="nutrition" class="mb-5">
+        <h2>Quick Nutrition Tips</h2>
+        <ol>
+          <li>Stay hydrated: aim for 2–3 liters of water daily.</li>
+          <li>Balance meals with proteins, carbs, and healthy fats.</li>
+          <li>Include fruits and vegetables in every meal.</li>
+        </ol>
+      </aside>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact the Blogger</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input id="name" name="name" type="text" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input id="email" name="email" type="email" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="msg" class="form-label">Message:</label>
+            <textarea id="msg" name="msg" rows="4" class="form-control" placeholder="Write your message…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="mt-4">
+      <p><small>© 2025 Fitness Journey Blog</small></p>
+    </footer>
+  </div>
+</section>
+
+<!-- FOOTER BAR -->
+<footer class="bg-dark text-center text-light py-3 mt-5">
+  <div class="container">
+    <p class="mb-1">© 2025 My ePortfolio | Built with HTML & Bootstrap</p>
+    <a class="btn btn-sm btn-outline-light" href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
